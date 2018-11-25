@@ -1,0 +1,64 @@
+
+resources:
+  - url: /local/custom_ui/weather-card.js
+    type: js
+  - url: /local/custom_ui/clock-element.js
+    type: js
+  - url: /local/custom_ui/circle-sensor-card.js
+    type: module
+  - url: /local/custom_ui/dark-sky-weather-card.js?v=1
+    type: js
+  - url: /local/custom_ui/monster-card.js?v=1
+    type: js
+  - url: /local/custom_ui/gauge-card.js
+    type: js
+  - url: /local/custom_ui/bignumber-card.js
+    type: js
+  - url: /local/custom_ui/alarm_control_panel-card.js?v=1.1
+    type: js
+  - url: /local/custom_ui/thermostat-card.js?v=1.2
+    type: module
+  - url: /local/custom_ui/canvas-gauge-card.js?v=0.1
+    type: module
+  - url: /local/custom_ui/calendar-card.js
+    type: module
+  - url: https://unpkg.com/moment@2.22.2/moment.js
+    type: js
+  - url: /local/custom_ui/ext-weblink.js?v=0.6
+    type: js
+  - url: /local/custom_ui/slider-entity-row.js?v=0.2
+    type: js
+
+name: Noobres Home
+views:
+  - name: Home
+    icon: mdi:home-assistant
+    theme: dark-mode
+    cards:
+      - type: entities
+        title: Lights
+        entities:
+          - entity: light.gateway_light_34ce00813667
+            type: custom:slider-entity-row
+      - type: entities
+        title: Switches
+        entities:
+          - entity: switch.reserva1
+            secondary_info: last-changed
+          - entity: switch.reserva2
+            secondary_info: last-changed           
+      - type: glance
+        title: Escritorio
+        entities:
+          - sensor.temperatura_escritorio
+          - sensor.umidade_escritorio
+            
+      - type: entity-filter
+        entities:
+          - device_tracker.google_maps_113640385496398566348
+          - device_tracker.google_maps_108233488612250951163
+        state_filter:
+          - 'home'
+        card:
+          type: glance
+          title: Pessoas em Casa

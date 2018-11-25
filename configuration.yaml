@@ -1,0 +1,303 @@
+homeassistant:
+  name: Noobres Home
+  latitude: !secret lat
+  longitude: !secret long
+  elevation: 676
+  unit_system: metric
+  time_zone: America/Sao_Paulo
+  customize: !include_dir_merge_named custom
+
+#---------------------Componentes Diversos-------
+
+config:
+
+frontend:
+
+logger:
+  default: info
+  logs:
+    homeassistant.components: info
+    homeassistant.components.device_tracker: error
+    homeassistant.components.camera: error
+    homeassistant.components.light: error
+    homeassistant.components.sensor:  error
+    homeassistant.components.binary_sensor: error
+    homeassistant.components.switch: error
+    homeassistant.components.automation: info
+    homeassistant.components.core: error
+    homeassistant.components.script: info
+    homeassistant.components.mqtt: info
+
+
+#updater:
+#  include_used_components: true
+
+history:
+
+logbook:
+  include:
+    domains:
+      - switch
+      - automation
+      - script
+      - light
+      - input_boolean
+  exclude:
+    entities:
+      - automation.checa_ferias
+      - automation.seta_ar_on
+      - automation.seta_ar_off
+      - automation.volume_lg_
+      - automation.volume_lg__2
+      - automation.temperatura_sala
+      - automation.teste_automacao_inputs
+      - automation.liga_lampada_teste
+      - automation.telegram_bot1
+      - automation.controle_geladeira_on
+      - automation.controle_geladeira_off
+
+sun:
+
+#map:
+
+discovery:
+
+#---------------------Alertas---------------------
+
+#alert:
+#  detecta_teste:
+#    name: Detecta Teste Input
+#    entity_id: input_boolean.ctrl_teste_02
+#    repeat: 2
+#    notifiers:
+#      - notifica_telegram
+
+#---------------------ffmpeg----------------------
+
+ffmpeg:
+  ffmpeg_bin: /usr/bin/ffmpeg
+
+#---------------------Xiaomi----------------------
+
+xiaomi_aqara:
+  discovery_retry: 10
+  gateways:
+   - mac: 34CE00813667
+     key: !secret xiaomi
+
+#---------------------Calendario-------------------
+
+#calendar:
+#  - platform: todoist
+#    token: !secret chave_todoist
+    
+#---------------------Google----------------
+
+#---------------------Media Player----------------
+
+#alarm_control_panel:
+#  - platform: manual
+#    name: Alarmes
+#    pending_time: 10
+
+#---------------------ALarme Manual---------------
+
+media_player:
+  - platform: cast
+    host: 192.168.2.64
+    
+  - platform: dlna_dmr
+    name: duosat
+    url: http://192.168.2.204:9197/dmr
+
+#---------------------HTTP------------------------
+
+http:
+  api_password: !secret http_senha
+  trusted_networks:
+   - 127.0.0.1
+   - 192.168.2.0/24
+  server_port: 80
+#  base_url: !secret httpurl
+#  ssl_certificate: /var/opt/homeassistant/certificate.pem
+#  ssl_key: /var/opt/homeassistant/privkey.pem
+#  ssl_certificate: /etc/ssl/localcerts/apache.pem
+#  ssl_key: /etc/ssl/localcerts/apache.key
+
+#---------------------Metereologia----------------
+
+weather:
+  - platform: yweather
+
+#---------------------Modbus----------------------
+
+#modbus:
+##  type: tcp
+#  host: 192.168.2.205
+#  port: 3090  
+
+#---------------------Telegram--------------------
+
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram
+    allowed_chat_ids:
+      - !secret telegram_chat_dedy
+      - !secret telegram_chat_elida
+  - platform: broadcast
+    api_key: !secret telegram
+    allowed_chat_ids:
+      - !secret telegram_chat_dedy
+      - !secret telegram_chat_elida
+  - platform: webhooks
+    api_key: !secret telegram
+    parse_mode: html
+    allowed_chat_ids:
+      - !secret telegram_chat_dedy
+      - !secret telegram_chat_elida
+
+#---------------------Thinger---------------------
+
+#thingspeak:
+#  api_key: !secret thing1
+#  id: 368190
+#  whitelist: sensor.potencia_ar
+
+#---------------------MQTT------------------------
+
+mqtt:
+  discovery: true
+  broker: 192.168.2.56
+  port: 1883
+  username: !secret mqtt_user
+  password: !secret mqtt_pass
+  keepalive: 60
+
+#---------------------Device Track----------------
+
+device_tracker:
+# - platform: ping
+#   hosts:
+#     leeco: 192.168.2.40
+#     asus: 192.168.2.45
+#    xiaomi: 192.168.2.48
+#     smart_cam: 192.168.2.42
+#   count: 10
+
+# - platform: owntracks_http
+ 
+ - platform: google_maps
+   username: !secret user_gmail_maps
+   password: !secret pass_gmail_maps
+
+# - platform: mqtt_json
+#   devices:
+#     denisxiaomi: zanzito/denisxiaomi/location
+#     elidaasus: zanzito/elidaasus/location
+#     j5: zanzito/j5/location
+#     denisleeco: zanzito/denisleeco/location
+#   track_new_devices: True
+#   interval_seconds: 10
+#   consider_home: 100
+
+
+#---------------------Econcms History------------
+
+#emoncms_history:
+#  api_key: !secret econ
+#  url: https://emoncms.org
+#  inputnode: 19
+#  whitelist:
+#    - sensor.cpu_temperature
+#    - sensor.tensao_ar
+#    - sensor.potencia_ar
+
+#---------------------Weblinks--------------------
+
+panel_iframe:
+  node_dev:
+    title: NR Dev
+    url: 'https://192.168.2.58:2410'
+    icon: mdi:responsive
+  node_ui:
+    title: NR UI
+    url: 'https://192.168.2.58:2410/ui'
+    icon: mdi:responsive
+  cozinha:
+    title: Sonoff Luz Cozinha
+    url: 'http://192.168.2.68'
+    icon: mdi:responsive
+  sala:
+    title: Sonoff Luz Sala
+    url: 'http://192.168.2.90'
+    icon: mdi:responsive
+  casal:
+    title: Sonoff Luz Quarto Casal
+    url: 'http://192.168.2.65'
+    icon: mdi:responsive
+  filho:
+    title: Sonoff Luz Quarto Filho
+    url: 'http://192.168.2.92'
+    icon: mdi:responsive
+  sacada:
+    title: Sonoff Luz Quarto Sacada
+    url: 'http://192.168.2.91'
+    icon: mdi:responsive
+     
+#---------------------Google----------------------
+
+#---------------------System Log------------------
+
+#system_log:
+#  max_entries: 100
+
+
+#---------------------TTS-------------------------
+
+#tts:
+#  - platform: google
+#    cache: true
+#    cache_dir: /tmp/tts
+#    time_memory: 3600
+#    language: 'pt-br'
+
+#---------------------IFTTT-----------------------
+
+ifttt:
+  key: !secret ifttt
+
+#---------------------Includes--------------------
+
+group: !include config/grupos.yaml
+
+automation: !include_dir_merge_list automation
+
+history_graph: !include_dir_merge_named graficos
+
+script: !include_dir_merge_named scripts
+
+switch: !include config/switch.yaml
+
+input_boolean: !include config/input_bool.yaml
+
+sensor: !include_dir_merge_list sensores
+
+binary_sensor: !include_dir_list sensores_binarios
+
+#input_select: !include config/select.yaml
+
+input_number: !include config/numeros.yaml
+
+zone: !include config/locais.yaml
+
+camera: !include_dir_merge_list cameras
+
+#input_text: !include config/textos.yaml
+
+#android_ip_webcam: !include_dir_merge_list android_cam
+
+light: !include_dir_merge_list lights
+
+notify: !include config/notificacoes.yaml
+
+#-------------------------------------------------
