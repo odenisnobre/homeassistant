@@ -1,0 +1,27 @@
+graf_temp_qc:
+  name: Temperatura Quarto Casal
+  entities:
+    - sensor.temperature_158d0001d6f829
+  hours_to_show: 48
+  refresh: 30
+  
+graf_temp_qf:
+  name: Temperatura Quarto Filho
+  entities:
+    - sensor.temperature_158d0001d82815
+  hours_to_show: 48
+  refresh: 30
+  
+graf_temp_sc:
+  name: Temperatura sacada
+  entities:
+    - sensor.temperature_158d0001d82855
+  hours_to_show: 48
+  refresh: 30
+  
+graf_temp_sl:
+  name: Temperatura Sala
+  entities:
+    - sensor.temperature_158d00019c9488
+  hours_to_show: 48
+  refresh: 30

@@ -1,0 +1,32 @@
+   
+- name: Notifica Telegram
+  platform: telegram
+  chat_id: !secret telegram_chat_dedy
+    
+- name: Notifica Texto
+  platform: file
+  filename: /var/opt/homeassistant/logs.txt
+  timestamp: true
+  
+- name: Notifica Mail
+  platform: smtp
+  server: smtp.gmail.com
+  port: 587
+  timeout: 15
+  starttls: true
+  username: noobresiot@gmail.com
+  password: !secret pass_gmail
+  sender: noobresiot@gmail.com
+  recipient: noobres00@gmail.com
+  sender_name: Noobres Home Notifications
+  
+- name: Notifica Twitter
+  platform: twitter
+  consumer_key: 2myQVMy4XwsLKOSFs0nnIIcgN
+  consumer_secret: QEkCZEeVxOjK6CcwDWPwR0gBc5zVjWESuyuO8UxKvsds2Pvp0Z
+  access_token: 978971045259567109-4IEFiTC0SuCyQ2St6PfAonHGDRvCIzK
+  access_token_secret: DoMFWDXQhLQkuuYkJ5mEnPfLGvs8y4P5IRaChVSjIgNCC
+  
+- name: Notifica Flock
+  platform: flock
+  access_token: https://api.flock.com/hooks/sendMessage/7a306ec1-708b-41a7-9f7c-fbf9f69c4b1c

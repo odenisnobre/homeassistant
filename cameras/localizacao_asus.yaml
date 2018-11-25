@@ -1,0 +1,4 @@
+- platform: generic
+  name: Asus
+  still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.google_maps_108233488612250951163.attributes.latitude }},{{ states.device_tracker.google_maps_108233488612250951163.attributes.longitude }}&zoom=16&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.google_maps_108233488612250951163.attributes.latitude }},{{ states.device_tracker.google_maps_108233488612250951163.attributes.longitude }}
+  limit_refetch_to_url_change: true

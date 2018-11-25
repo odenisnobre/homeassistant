@@ -1,0 +1,24 @@
+                  
+scr_checa_ilum_on:
+  alias: Verifica Iluminação Ligada
+  sequence:
+    - service: notify.notifica_telegram
+      data:
+        title: 'Status Iluminação'
+        message: '{%- for state in states.light -%}
+                  {% if state.state == "on" %}
+                  {{ state.name | lower }}:  {{state.state}}
+                  {% endif %}
+                  {%- endfor -%}'
+                  
+scr_checa_switch_on:
+  alias: Verificar Tomadas Ligados
+  sequence:
+    - service: notify.notifica_telegram
+      data:
+        title: 'Tomadas Ligadas'
+        message: '{%- for state in states.switch -%}
+                  {% if state.state == "on" %}
+                  {{ state.name | lower }}:  {{state.state}}
+                  {% endif %}
+                  {%- endfor -%}'

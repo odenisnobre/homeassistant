@@ -1,0 +1,100 @@
+sensor.pressure_158d0001d6f829:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: pressure158d0001d6f829
+sensor.illumination_34ce00813667:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: illumination34ce00813667
+sensor.temperature_158d0001d82855:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: temperature158d0001d82855
+sensor.temperature_158d0001d82815:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: temperature158d0001d82815
+sensor.humidity_158d0001d82855:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: humidity158d0001d82855
+sensor.humidity_158d0001d82815:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: humidity158d0001d82815
+sensor.pressure_158d0001d82855:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: pressure158d0001d82855
+sensor.pressure_158d0001d82815:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: pressure158d0001d82815
+sensor.temperature_158d0001d6f829:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: temperature158d0001d6f829
+sensor.temperature_158d00019c9488:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: temperature158d00019c9488
+sensor.humidity_158d0001d6f829:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: humidity158d0001d6f829
+sensor.humidity_158d00019c9488:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: humidity158d00019c9488
+binary_sensor.switch_158d00020078f6:
+  config_entry_id:
+  name: Sala
+  platform: xiaomi_aqara
+  unique_id: status158d00020078f6
+binary_sensor.motion_sensor_158d00015da38d:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: status158d00015da38d
+binary_sensor.switch_158d000200791f:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: status158d000200791f
+binary_sensor.switch_158d00016d7b12:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: status158d00016d7b12
+switch.plug_158d0001dc5fc2:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: status158d0001dc5fc2
+light.gateway_light_34ce00813667:
+  config_entry_id:
+  name:
+  platform: xiaomi_aqara
+  unique_id: rgb34ce00813667
+media_player.sala_de_tv:
+  config_entry_id:
+  name:
+  platform: cast
+  unique_id: a76cbb08-444e-94f2-58c0-f506197b3063
+binary_sensor.switch_158d0001f9f302:
+  config_entry_id:
+  name: Chuveiro
+  platform: xiaomi_aqara
+  unique_id: status158d0001f9f302

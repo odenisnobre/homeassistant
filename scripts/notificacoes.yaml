@@ -1,0 +1,91 @@
+scr_acordando_notifica:
+  alias: Acordando
+  sequence:
+    - service: notify.notifica_telegram
+      data:
+        message: 'Ligando Receptor'
+    - delay: '00:00:02'
+    - service: switch.turn_on
+      entity_id: switch.sala_receptor
+    - service: notify.notifica_telegram
+      data:
+        message: 'Recetor Ligado'
+    - service: notify.notifica_telegram
+      data:
+        message: 'Aguardando Tempo'
+    - delay: '00:00:20'
+    - service: switch.turn_on
+      entity_id: switch.sala_televisao
+    - service: notify.notifica_telegram
+      data:
+        message: 'TV Ligada'
+    - delay: '00:00:03'
+    - service: switch.turn_on
+      entity_id: switch.num_8
+    - delay: '00:00:01'
+    - service: switch.turn_on
+      entity_id: switch.num_5
+    - service: notify.notifica_telegram
+      data:
+        message: 'Canal Selecionado'
+        
+scr_loca_casa:
+  alias: Localiza Casa
+  sequence:
+    - service: notify.notifica_telegram
+      data:
+        message: 'Elida Está em Casa'
+      
+scr_loca_casa2:
+  alias: Localiza Casa 2
+  sequence:
+    - service: notify.notifica_telegram_2
+      data:
+        message: 'Denis Está em Casa'
+          
+scr_loca_not_casa:
+  alias: Localiza Not Casa
+  sequence:
+    - service: notify.notifica_telegram
+      data:
+        message: 'Elida não Está em Casa'
+    - service: notify.notifica_telegram
+      data:
+        message: 'Localizando'
+    - delay: '00:00:02'
+    - service: telegram_bot.send_location
+      data:
+        latitude: '{{states.device_tracker.google_maps_108233488612250951163.attributes.latitude}}'
+        longitude: '{{states.device_tracker.google_maps_108233488612250951163.attributes.longitude}}'  
+
+scr_loca_not_casa2:
+  alias: Localiza Not Casa 2
+  sequence:
+    - service: notify.notifica_telegram
+      data:
+        message: 'Denis não Está em Casa'
+    - service: notify.notifica_telegram
+      data:
+        message: 'Localizando'
+    - delay: '00:00:02'
+    - service: telegram_bot.send_location
+      data:
+        latitude: '{{states.device_tracker.google_maps_113640385496398566348.attributes.latitude}}'
+        longitude: '{{states.device_tracker.google_maps_113640385496398566348.attributes.longitude}}'   
+        target: "474880777"            
+          
+scr_atualiza_dispositivos:
+  alias: Atualiza Dispositivos
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "owntracks/dan/leeco/cmd"
+        payload_template: '{"_type":"cmd","action":"reportLocation"}'
+    - service: mqtt.publish
+      data:
+        topic: "owntracks/elida/samsung/cmd"
+        payload_template: '{"_type":"cmd","action":"reportLocation"}'
+    - service: mqtt.publish
+      data:
+        topic: "owntracks/dan/xiaomi/cmd"
+        payload_template: '{"_type":"cmd","action":"reportLocation"}'

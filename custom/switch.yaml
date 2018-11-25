@@ -1,0 +1,55 @@
+switch.geladeira:
+  icon: mdi:fridge
+  friendly_name: Tomada Geladeira
+  
+switch.resfria_home_assistant:
+  icon: mdi:fan
+  
+switch.abajur_pedro_henrique:
+  icon: mdi:lamp
+  
+switch.carregador_relogio:
+  icon: mdi:battery-charging
+  
+switch.lgld:
+  icon: mdi:television
+  assumed_state: false
+  
+switch.tomada_geral:
+  icon: mdi:power
+  
+switch.lgv:
+  icon: mdi:plus-circle
+  assumed_state: false
+  
+switch.lgv_2:
+  icon: mdi:minus-circle
+  assumed_state: false
+  
+switch.tomada_tv:
+  icon: mdi:television
+  assumed_state: false
+  
+camera.camera_principal:
+  friendly_name: Camera Principal
+  
+switch.ar_condicionado_16:
+  icon: mdi:air-conditioner
+  
+switch.ar_condicionado_automatico:
+  icon: mdi:air-conditioner
+  
+switch.ar_condicionado_doctor:
+  icon: mdi:air-conditioner
+  
+switch.ar_condicionado_turbo:
+  icon: mdi:air-conditioner
+  
+switch.ar_condicionado_ventilar:
+  icon: mdi:air-conditioner
+  
+switch.controle_ar_condicionado:
+  icon: mdi:air-conditioner
+  
+switch.iluminacao_cozinha:
+  assumed_state: false

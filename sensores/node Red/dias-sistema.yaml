@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: Dias Sistema Online
+  unit_of_measurement: ""
+  state_topic: "casa/sistema/dias"
+  qos: 1
+  payload_available: "online"
+  payload_not_available: "offline"

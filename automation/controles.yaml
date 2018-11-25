@@ -1,0 +1,17 @@
+    
+- alias: Status Dispositivos Elida off Denis off
+  trigger:
+    platform: state
+    entity_id: device_tracker.google_maps_108233488612250951163
+    from: 'home'
+    to: 'not_home'
+  condition:
+    - condition: state
+      entity_id: device_tracker.google_maps_113640385496398566348
+      state: 'not_home'
+  action:
+    - service: script.turn_on
+      entity_id: script.scr_checa_ilum_on
+    - service: script.turn_on
+      entity_id: script.scr_checa_switch_on
+    

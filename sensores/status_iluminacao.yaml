@@ -1,0 +1,55 @@
+- platform: template
+  sensors:
+    sts_iluminacao_cozinha:
+      friendly_name: Sts Iluminação Cozinha
+      value_template: >-
+        {% if is_state('light.iluminacao_da_cozinha', 'on') %} 
+          Ligada 
+        {% else %} 
+          Desligada 
+        {% endif%}
+          
+    sts_iluminacao_sala:
+      friendly_name: Sts Iluminação Sala
+      value_template: >-
+        {% if is_state('light.iluminacao_da_sala', 'on') %} 
+          Ligada 
+        {% else %} 
+          Desligada 
+        {% endif%}
+          
+    sts_iluminacao_sacada:
+      friendly_name: Sts Iluminação Sacada
+      value_template: >-
+        {% if is_state('light.iluminacao_da_sacada', 'on') %} 
+          Ligada 
+        {% else %} 
+          Desligada 
+        {% endif%}
+          
+    sts_iluminacao_filho:
+      friendly_name: Sts Iluminação Quarto Filho
+      value_template: >-
+        {% if is_state('light.iluminacao_do_quarto_filho', 'on') %} 
+          Ligada 
+        {% else %} 
+          Desligada 
+        {% endif%}
+          
+    sts_iluminacao_casal:
+      friendly_name: Sts Iluminação Quarto Casal
+      value_template: >-
+        {% if is_state('light.iluminacao_do_quarto_casal', 'on') %} 
+          Ligada 
+        {% else %} 
+          Desligada 
+        {% endif%}
+          
+    sts_iluminacao_corredor:
+      friendly_name: Sts Iluminação Corredor
+      value_template: >-
+        {% if is_state('light.iluminacao_do_corredor', 'on') %} 
+          Ligada 
+        {% else %} 
+          Desligada 
+        {% endif%}

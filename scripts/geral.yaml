@@ -1,0 +1,105 @@
+scr_envia_temp_rasp:
+  alias: Envia Temperatura Raspberry
+  sequence:
+    - service: notify.notifica_telegram
+      data:
+        title: Temperatura Raspberry
+        message: A Temperatura atual do raspberry é {{ states.sensor.cpu_temperatute.state}}
+
+scr_liga_luz_01:
+  alias: Liga Luz Cor Vermelha
+  sequence:
+    - service: light.turn_on
+      entity_id: light.gateway_light_34ce00813667
+      data:
+        brightness: 20
+        rgb_color: [241,243,230]
+
+scr_geral_dormir:
+  alias: Dormindo
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.iluminacao_do_corredor
+          - light.iluminacao_da_cozinha
+          - light.iluminacao_do_quarto_casal
+          - light.iluminacao_do_quarto_filho
+          - light.iluminacao_da_sala
+          - light.iluminacao_da_sacada
+          - light.gateway_light_34ce00813667
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.sala_receptor
+          - switch.sala_televisao
+
+scr_geral_fala_tv:
+  alias: Media TV
+  sequence:
+    - service: tts.google_say
+      entity_id: media_player.sala_de_tv
+      data_template:
+        message: '{{states.input_text.text1.state}}'
+
+scr_familia_not_home_dia:
+  alias: Familia Saindo de Casa Dia
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.iluminacao_do_corredor
+          - light.iluminacao_da_cozinha
+          - light.iluminacao_do_quarto_casal
+          - light.iluminacao_do_quarto_filho
+          - light.iluminacao_da_sala
+          - light.iluminacao_da_sacada
+          - light.gateway_light_34ce00813667
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.sala_receptor
+          - switch.sala_televisao
+          - switch.reserva1
+          - switch.reserva2
+          - switch.reserva3
+          - switch.reserva4
+          - switch.sala_sl1
+
+scr_familia_not_home_noite:
+  alias: Familia Saindo de Casa Noite
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.iluminacao_do_corredor
+          - light.iluminacao_da_cozinha
+          - light.iluminacao_do_quarto_casal
+          - light.iluminacao_do_quarto_filho
+          - light.iluminacao_da_sala
+          - light.gateway_light_34ce00813667
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.sala_receptor
+          - switch.sala_televisao
+          - switch.reserva1
+          - switch.reserva2
+          - switch.reserva3
+          - switch.reserva4
+          - switch.sala_sl1
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.iluminacao_da_sacada
+
+scr_checa_alarmes:
+  alias: Loop alarmes
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.ctrl_teste_02
+    - service: light.turn_off
+      entity_id: light.iluminacao_da_sacada
+    - delay: 00:00:05
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.ctrl_teste_02

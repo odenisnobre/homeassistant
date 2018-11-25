@@ -1,0 +1,45 @@
+scr_ar_con_off:
+  alias: Ar Off
+  sequence:
+    - service: switch.turn_off
+      entity_id: switch.ar_controle
+        
+scr_ar_con_on:
+  alias: Ar On
+  sequence:
+    - service: switch.turn_on
+      entity_id: switch.ar_controle
+    - delay: '00:00:01'
+    - service: switch.turn_on
+      entity_id: switch.ar_con_16
+    - delay: '00:00:02'
+    - service: switch.turn_on
+      entity_id: switch.ar_cont_doctor
+    - delay: '00:00:02'
+    - service: switch.turn_on
+      entity_id: switch.ar_turbo
+        
+scr_gelar:
+  alias: Gelar
+  sequence:
+    - service: notify.notifica_telegram
+      data:
+        message: 'Iniciando'
+    - delay: '00:00:02'
+    - service: switch.turn_on
+      entity_id: switch.ar_con_16
+    - service: notify.notifica_telegram
+      data:
+        message: 'Ar Condicionado Ligado'
+    - delay: '00:00:02'
+    - service: switch.turn_on
+      entity_id: switch.ar_cont_doctor
+    - service: notify.notifica_telegram
+      data:
+        message: 'Doctor Ligado'
+    - delay: '00:00:02'
+    - service: switch.turn_on
+      entity_id: switch.ar_turbo
+    - service: notify.notifica_telegram
+      data:
+        message: 'Turbo Ligado'

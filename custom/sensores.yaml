@@ -1,0 +1,172 @@
+sensor.nivel_bateria:
+  icon: mdi:battery
+  
+sensor.yr_temperature:
+  friendly_name: Temperatura Externa(1)
+ 
+sensor.yr_humidity:
+  friendly_name: Umidade Externa(1)
+  icon: mdi:water-percent
+  
+sensor.moon:
+  friendly_name: Lua
+  
+sun.sun:
+  friendly_name: Posição do Sol
+
+sensor.yweather_temperature:
+  friendly_name: Temperatura Externa(2)
+  
+sensor.yweather_humidity:
+  friendly_name: Umidade Externa(2)
+  icon: mdi:water-percent
+  
+sensor.yweather_temperature_max:
+  friendly_name: Temperatura Maxima
+  
+sensor.yweather_temperature_min:
+  friendly_name: Temperatura Minima
+  
+sensor.external_ip:
+  friendly_name: IP Externo
+  
+sensor.date:
+  friendly_name: Data
+  
+sensor.disk_use_:
+  friendly_name: Uso do Disco
+  
+sensor.ha_installed_version:
+  friendly_name: HA - Versão Disponível
+  
+sensor.ipv4_address_eth0:
+  friendly_name: IP Interno
+
+sensor.last_boot:
+  friendly_name: Ultimo Boot
+  
+sensor.ram_free:
+  friendly_name: Memoria Livre
+  
+sensor.time:
+  friendly_name: Hora
+  
+sensor.since_last_boot:
+  friendly_name: Tempo após Inicialização
+  
+sensor.cpu_temperature:
+  friendly_name: Temperatura da CPU
+  
+sensor.cpu_use:
+  friendly_name: Uso da CPU
+
+sensor.horas_liga_rel:
+  icon: 'mdi:alarm-check'
+  
+sensor.horas_desliga_rel:
+  icon: 'mdi:alarm-check'
+  
+#---------------------------------------------------
+
+# Dados Xiaomi - Quarto Casal
+
+sensor.humidity_158d0001d6f829:
+  friendly_name: Umidade Quarto Casal
+  icon: mdi:water-percent
+
+sensor.temperature_158d0001d6f829:
+  friendly_name: Temperatura Quarto Casal
+
+sensor.pressure_158d0001d6f829:
+  friendly_name: Pressão Quarto Casal
+  
+
+# Dados Xiaomi - Quarto Filho
+  
+sensor.humidity_158d0001d82815:
+  friendly_name: Umidade Quarto Filho
+  icon: mdi:water-percent
+  
+sensor.temperature_158d0001d82815:
+  friendly_name: Temperatura Quarto Filho
+  
+sensor.pressure_158d0001d82815:
+  friendly_name: Pressão Quarto Filho
+ 
+# Dados Xiaomi - Sala
+
+sensor.humidity_158d00019c9488:
+  friendly_name: Umidade Sala
+  icon: mdi:water-percent
+  
+sensor.temperature_158d00019c9488:
+  friendly_name: Temperatura Sala
+  
+
+# Dados Xiaomi - Sacada
+
+sensor.temperature_158d0001d82855:
+  friendly_name: Temperatura Sacada
+  
+sensor.pressure_158d0001d82855:
+  friendly_name: Pressão Sacada    
+  
+sensor.humidity_158d0001d82855:
+  friendly_name: Umidade Sacada
+  icon: mdi:water-percent
+  
+light.gateway_light_34ce00813667:
+  friendly_name: Lux Xiaomi
+  
+sensor.illumination_34ce00813667:
+  friendly_name: Intensidade Lux Xiaomi
+  
+binary_sensor.switch_158d00016d7b12:
+  friendly_name: Botão Lado Direito
+  
+binary_sensor.switch_158d000200791f:
+  friendly_name: Botão Lado Esquerdo
+ 
+sensor.bateria_nivel_sala:
+  icon: mdi:battery
+  
+sensor.bateria_nivel_quarto_casal:
+  icon: mdi:battery
+
+sensor.bateria_nivel_quarto_filho:
+  icon: mdi:battery
+
+sensor.bateria_nivel_sacada:
+  icon: mdi:battery
+
+sensor.usd:
+  friendly_name: Cotação Dolar
+  icon: mdi:currency-usd
+  
+sensor.cotacao_bitcoin_real:
+  icon: mdi:currency-usd
+  
+weather.yweather:
+  friendly_name: Condições do Tempo
+  
+sensor.linha_01:
+  custom_ui_state_card: state-card-hline
+sensor.linha_02:
+  custom_ui_state_card: state-card-hline
+sensor.linha_03:
+  custom_ui_state_card: state-card-hline
+sensor.linha_04:
+  custom_ui_state_card: state-card-hline
+sensor.linha_05:
+  custom_ui_state_card: state-card-hline
+sensor.linha_06:
+  custom_ui_state_card: state-card-hline
+  
+sensor.market_price_usd:
+  friendly_name: Preço de Mercado
+  
+sensor.exchange_rate_1_btc:
+  friendly_name: Taxa de Cambio
+  
+sensor.trade_volume:
+  friendly_name: Volume de Comércio

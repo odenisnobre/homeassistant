@@ -1,0 +1,4 @@
+- platform: generic
+  name: Google Denis
+  still_image_url: https://lh6.googleusercontent.com/-IYO2xqedDR4/AAAAAAAAAAI/AAAAAAAAAmI/enURATOhehk/photo.jpg
+  limit_refetch_to_url_change: true

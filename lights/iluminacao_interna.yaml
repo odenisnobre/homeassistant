@@ -1,0 +1,64 @@
+- platform: mqtt
+  name: "Iluminação da Cozinha"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "stat/cozinha-luz/POWER"
+  command_topic: "cmnd/cozinha-luz/POWER"
+  availability_topic: "tele/cozinha-luz/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+  icon: mdi:television-classic
+  
+- platform: mqtt
+  name: "Iluminação da Sala"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "stat/luz-sala/POWER1"
+  command_topic: "cmnd/luz-sala/POWER1"
+  availability_topic: "tele/luz-sala/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+  icon: mdi:television-classic 
+  
+- platform: mqtt
+  name: "Iluminação do Corredor"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "stat/luz-sala/POWER2"
+  command_topic: "cmnd/luz-sala/POWER2"
+  availability_topic: "tele/luz-sala/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+  icon: mdi:television-classic
+  
+- platform: mqtt
+  name: "Iluminação do Quarto Casal"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "stat/luz-casal/POWER"
+  command_topic: "cmnd/luz-casal/POWER"
+  availability_topic: "tele/luz-casal/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+  icon: mdi:television-classic
+  
+- platform: mqtt
+  name: "Iluminação do Quarto Filho"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "stat/luz-filho/POWER"
+  command_topic: "cmnd/luz-filho/POWER"
+  availability_topic: "tele/luz-filho/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+  icon: mdi:television-classic

@@ -1,0 +1,28 @@
+- platform: template
+  sensors:
+    bateria_nivel_sala:
+      friendly_name: Bateria Sensor Sala
+      value_template: '{{ states.sensor.humidity_158d00019c9488.attributes.battery_level }}'
+      unit_of_measurement: "%"
+      icon_template: >
+        {% set battery_level = states.sensor.humidity_158d00019c9488.attributes.battery_level | default(0) | int %}
+        {% set battery_round = (battery_level / 10) | int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+    bateria_nivel_sacada:
+      friendly_name: Bateria Sensor Sacada
+      value_template: '{{ states.sensor.humidity_158d0001d82855.attributes.battery_level }}'
+      unit_of_measurement: "%"
+    bateria_nivel_quarto_filho:
+      friendly_name: Bateria Sensor Quarto Filho
+      value_template: '{{ states.sensor.humidity_158d0001d82815.attributes.battery_level }}'
+      unit_of_measurement: "%"
+    bateria_nivel_quarto_casal:
+      friendly_name: Bateria Sensor Quarto Casal
+      value_template: '{{ states.sensor.humidity_158d0001d6f829.attributes.battery_level }}'
+      unit_of_measurement: "%"

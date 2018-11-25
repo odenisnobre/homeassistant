@@ -1,0 +1,72 @@
+scr_acordando:
+  alias: Acordando
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.sala_receptor
+    - delay: '00:00:10'
+    - service: homeassistant.turn_on
+      entity_id: switch.sala_televisao
+          
+scr_vlm_mais:
+  alias: Aumenta Volume
+  sequence:
+    - service: counter.increment
+      entity_id: counter.ciclo_alarme
+    - delay: '00:00:01'
+    - service: homeassistant.turn_off
+      data:
+        entity_id: input_boolean.ctrl_vol_mais_reset
+      
+scr_vlm_mais_reset:
+  alias: Aumenta Volume Reset
+  sequence:
+    - delay: '00:00:01'
+    - service: homeassistant.turn_on
+      data:
+        entity_id: input_boolean.ctrl_vol_mais_reset
+        
+scr_set12:
+  alias: Canal 12
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.num_1
+    - delay: '00:00:01'
+    - service: homeassistant.turn_on
+      entity_id: switch.num_2
+       
+scr_set85:
+  alias: Canal 85
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.num_8
+    - delay: '00:00:01'
+    - service: homeassistant.turn_on
+      entity_id: switch.num_5
+      
+scr_trabalhar:
+  alias: Indo Trabalhar
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: switch.sala_receptor
+    - service: homeassistant.turn_off
+      entity_id: switch.sala_televisao
+      
+scr_aumenta_volume:
+  alias: 'Controle Volume +'
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.lgv
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.vol_mais_lg
+    - service: homeassistant.turn_off  
+      entity_id: switch.lgv
+      
+scr_diminui_volume:
+  alias: 'Controle Volume -'
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.lgv_2
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.vol_menos_lg
+    - service: homeassistant.turn_off  
+      entity_id: switch.lgv_2

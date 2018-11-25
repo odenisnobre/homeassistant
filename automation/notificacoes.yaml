@@ -1,0 +1,22 @@
+      
+- alias: Dona Home
+  trigger:
+    platform: state
+    entity_id: device_tracker.google_maps_108233488612250951163
+    from: 'not_home'
+    to: 'home'
+  action:
+    service: notify.notifica_telegram
+    data:
+      message: Elida está em Casa
+      
+- alias: Dona Not Home
+  trigger:
+    platform: state
+    entity_id: device_tracker.google_maps_108233488612250951163
+    from: 'home'
+    to: 'not_home'
+  action:
+    service: notify.notifica_telegram
+    data:
+      message: Elida saiu de Casa

@@ -1,0 +1,8 @@
+- platform: mqtt
+  name: Temperatura Escritorio
+  unit_of_measurement: "°C"
+  state_topic: "tele/esp-02/SENSOR"
+  value_template: "{{ value_json['DHT11'].Temperature }}"
+  qos: 1
+  payload_available: "online"
+  payload_not_available: "offline"

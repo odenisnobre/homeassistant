@@ -1,0 +1,4 @@
+- platform: generic
+  name: Google Elida
+  still_image_url: https://lh4.googleusercontent.com/-hSlNKuBt1m8/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq0Aemt67mk7akE4xibShg7V5ZFE7w/mo/photo.jpg
+  limit_refetch_to_url_change: true

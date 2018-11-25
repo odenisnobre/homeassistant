@@ -1,0 +1,21 @@
+   
+- name: Notifica Telegram
+  platform: telegram
+  chat_id: !secret telegram_chat_dedy
+    
+- name: Notifica Texto
+  platform: file
+  filename: /var/opt/homeassistant/logs.txt
+  timestamp: true
+  
+- name: Notifica Mail
+  platform: smtp
+  server: smtp.gmail.com
+  port: 587
+  timeout: 15
+  starttls: true
+  username: noobresiot@gmail.com
+  password: !secret pass_gmail
+  sender: noobresiot@gmail.com
+  recipient: noobres00@gmail.com
+  sender_name: Noobres Home Notifications

@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: Hora Desliga TV
+  unit_of_measurement: ""
+  state_topic: "casa/sala/tv/hdesliga"
+  qos: 1
+  payload_available: "online"
+  payload_not_available: "offline"

@@ -1,0 +1,20 @@
+scr_control_sacada:
+  alias: Controla Iluminacao Sacada
+  sequence:
+    - service: light.turn_on
+      entity_id: light.iluminacao_da_sacada
+    - delay: '00:30:00'
+    - service: light.turn_off
+      entity_id: light.iluminacao_da_sacada
+    - delay: '00:30:00'
+    - service: light.turn_on
+      entity_id: light.iluminacao_da_sacada
+    - delay: '00:30:00'
+    - service: light.turn_off
+      entity_id: light.iluminacao_da_sacada
+    - delay: '00:10:00'
+    - service: light.turn_on
+      entity_id: light.iluminacao_da_sacada
+    - delay: '00:10:00'
+    - service: light.turn_off
+      entity_id: light.iluminacao_da_sacada

@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: Arquitetura Sistema
+  unit_of_measurement: ""
+  state_topic: "casa/sistema/arquitetura"
+  qos: 1
+  payload_available: "online"
+  payload_not_available: "offline"

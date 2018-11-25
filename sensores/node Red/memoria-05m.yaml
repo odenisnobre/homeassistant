@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: Uso Memoria 05 Minutos
+  unit_of_measurement: ""
+  state_topic: "casa/sistema/memoria/05"
+  qos: 1
+  payload_available: "online"
+  payload_not_available: "offline"

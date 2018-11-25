@@ -1,0 +1,71 @@
+- platform: mqtt
+  name: "Controle Iluminação da Cozinha"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "casa/iluminacao/controle/cozinha"
+  command_topic: "casa/iluminacao/controle/cozinha"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+  icon: mdi:television-classic
+  
+- platform: mqtt
+  name: "Controle Iluminação da Sala"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "casa/iluminacao/controle/sala"
+  command_topic: "casa/iluminacao/controle/sala"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+  icon: mdi:television-classic 
+  
+- platform: mqtt
+  name: "Controle Iluminação do Corredor"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "casa/iluminacao/controle/corredor"
+  command_topic: "casa/iluminacao/controle/corredor"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+  icon: mdi:television-classic
+  
+- platform: mqtt
+  name: "Controle Iluminação do Quarto Casal"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "casa/iluminacao/controle/casal"
+  command_topic: "casa/iluminacao/controle/casal"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+  icon: mdi:television-classic
+  
+- platform: mqtt
+  name: "Controle Iluminação do Quarto Filho"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "casa/iluminacao/controle/filho"
+  command_topic: "casa/iluminacao/controle/filho"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+  icon: mdi:television-classic
+  
+- platform: mqtt
+  name: "Controle Iluminação da Sacada"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "casa/iluminacao/controle/sacada"
+  command_topic: "casa/iluminacao/controle/sacada"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+  icon: mdi:television-classic

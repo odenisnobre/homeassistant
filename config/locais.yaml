@@ -1,0 +1,26 @@
+
+- name: Trabalho
+  latitude: !secret lati_trab
+  longitude: !secret long_trab
+  icon: mdi:work
+  
+- name: Irma
+  latitude: !secret lati_irma
+  longitude: !secret long_irma
+  icon: mdi:work
+  
+- name: Junior
+  latitude: !secret lati_junior
+  longitude: !secret long_junior
+  icon: mdi:work
+  
+- name: Emerson
+  latitude: !secret lati_emerson
+  longitude: !secret long_emerson
+  icon: mdi:work
+  
+- name: Sogra
+  latitude: !secret lati_sogra
+  longitude: !secret long_sogra
+  icon: mdi:work
+  

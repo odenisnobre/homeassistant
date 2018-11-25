@@ -1,0 +1,114 @@
+
+- platform: broadlink
+  host: 192.168.2.12
+  mac: '34:EA:34:B2:EA:81'
+  type: rm_mini
+  timeout: 5
+  switches:
+    ar_con_16:
+      friendly_name: Ar Condicionado 16
+      command_on: 'JgDyABMAAk5iAAEnEQ8QMhAREBEPEhARDxEPEg8SDzIQERAREDEQERARDzIQMRAyEDERMhAQDxIPEg8RDxIQERARDxEQERAREBAQERAREBEPERASDxIPEQ8SDxIPEQ8SDxIQEQ8REBEQERAQEBEQERARDxEQMhAyEDEPMxBiYgABJxAyERAPERAREBEQEBAREBEQEQ8yEBIPEQ8zDzIPMhAyEBEQMRAyEDEQMRAyEDIPMw8yDxIPERAREDIPMhAxEBEQERARDxEQEhAREBAPEg8SDzIPEhARDxEQMhAQEBEQERARDxEQERAREDIPMg8zDzIQAA0FAAAAAAAA=='
+      command_off: ''
+      
+    ar_controle:
+      friendly_name: Controle Ar Condicionado
+      command_on: 'JgBoARUAAklkAAElEg8SLxIPEg8SDxEQERAQEBEQETEQEBIPEi8SDxIPEi8SMBIvEjEQMRAREBAREBEQEBASDxIPEg8SDhIPEg8SDhIPEg8SDxIPERAREBEPERAREBAQERASDxIPEg4SDxIPEg4SDxIPEg8RMBIwETERMBJgZQABJRIvEg8SDxIOEg8SDxIOEg8SDxIwERAREBEwERAQMRIwEi8SLxIwEi8SDxIPEg8REBEQEQ8REBEQEBERDxIPEg8SDhIPEg8SDxEPEg8SDxIOEhAREBEPEg8REBAREBAREBIPEg4SDxIPEg8SDhIPEg8SYWMAASUSMBIPERAREBEPERAREBIPEQ8SMBIOEg8SLxMOEjASMBEQETAPMhExEi8SMBIvEjASLxIPEg8SDxExETAPMhIPEg8SDxIOEg8SDxIOEg8SDxIvEjASDxExEQ8REBIwEQ8SDxIPEg4SDxIwEi8SLxIwEQANBQ=='
+      command_off: 'JgBoARMAAkxhAAEnEBEQMRAREBEQEQ8SDxIPEQ8SDzMPERAREDEQMhAREDEQMg8yEDIPMw8RDxIPEhARDxEQERAREBAQERAREBAQERAREBEQEBASDxIPEQ8SDxIPEg8REBEQERAQEBEQERARDxEQERAREBAQERASDzIPMw9jYgABJxAxEBEQERAREBAQERAREBAQERAyDxIPEg8yDxIPMg8zEDEQMhAxEDIPERAREBEQEQ8SDxIPEQ8SDxIPEg8REBEQERAQEBEQERAREBAQERAREBEPERASDxEQEQ8SDxIPERAREBEQEQ8REBEQERAQEBEQYmIAASgQMRERDxEPEg8SDxEPEg8SEBEQMRAREBAQMhAxEDIQMRASDzIPMw8yEDEQMhAxEDIQMRAREBEPERAzDzIPMg8SDxIQERAQEBEQERAQEBEQERAxETEQEQ8zDxEQEQ8zDxEQERAREBAQERAREBEPMhAyDwANBQ=='
+ 
+    ar_cont_doctor:
+      friendly_name: Ar Condicionado Doctor
+      command_on: 'JgDyABIAAj5iAAEnERAQMRAREBEQEBASDxIPEQ8SDzMPERAREDEQERAREDEQMhAxEDIPMxARDxEPEg8SDxEQERAREBEQEBAREBEQEBAREBEQEQ8REBIPEg8RDxIPEg8RDxIQERAREBAQERAREBAQERAREBEQMRAyEDIPMhBiYgABKBAxEBEQEQ8REBEQERAQEBEQERAxEBIPEg8yDxIPMhAyDxEQMhAxEDIPMhAyDzMQMQ8zDzIQMRAREDIQMRAxEBEQERAREBAQEg8SDxEPEg8SDzIQERAREBAQMhAQEBEQERAREBAQERAREDIQMQ8zDzIQAA0FAAAAAAAA=='
+      command_off: 'JgDyABMAAkliAAEnERAQMRAREBEQEBASDxIPEQ8SDzIQERAREDEQERAREDEQMhAxEDIPMw8REBEPEg8SDxEQERAREBAQERAREBEQEBAREBEQEQ8REBIPEg8RDxIPEg8REBEQERARDxEQERAREBAQERAREBEPMhAyEDIPMhBiYgABKA8yEBEQEBAREBEQERAQEBEQERAxEBIPERARDxIPMhAyEBAQMhAxEDIQMRAyEDEQMg8zDxEQEQ8SEDEQMhAxEBEQERAQEBEQERARDxIPEg8yDzMPERAyEBAQMhAxEBEQERARDxEQERAREDIQMQ8zDzIQAA0FAAAAAAAA=='
+      
+    ar_turbo:
+      friendly_name: Ar Condicionado Turbo
+      command_on: 'JgDyABIAAj5iAAEnERAQMRAREBEQEBASDxIPEQ8SDzMPERAREDEQERAREDEQMhAxEDIPMxARDxEPEg8SDxEQERAREBEQEBAREBEQEBAREBEQEQ8REBIPEg8RDxIPEg8RDxIQERAREBAQERAREBAQERAREBEQMRAyEDIPMhBiYgABKBAxEBEQEQ8REBEQERAQEBEQERAxEBIPEg8yDxIPMhAyDxEQMhAxEDIPMhAyDzMQMQ8zDzIQMRAREDIQMRAxEBEQERAREBAQEg8SDxEPEg8SDzIQERAREBAQMhAQEBEQERAREBAQERAREDIQMQ8zDzIQAA0FAAAAAAAA=='
+      command_off: 'JgDyABMAAj5hAAEoEBAQMhARDxEQERASDxEPEg8SDzIQERARDzIQERAQEDIQMRAyEDEQMhARDxIPEg8REBEQERAQEBEQERAREBAQERAREBAQERAREBEQEQ8SDxIPERAREBEQEBAREBEQERAQEBEQERAQEBEQMhAyEDEPMxBiYgABJxAyEBAQERAREBEQEBAREBEQEBMvEBEQEQ8zDzIQMRAyEg8QMRAxEDIQMRAyEDIQMQ8zDxIPERAREDEQMhAxEBEQERARDxEQERAREBEQEQ8SDzIPEhAQEBEQMhAQEBEQERAQEBEQERAREDIQMQ8zDzIQAA0FAAAAAAAA=='
+ 
+ 
+ 
+- platform: broadlink
+  host: 192.168.2.10
+  mac: '34:EA:34:C6:E6:FA'
+  type: mp1
+  friendly_name: 'MP1'
+  slots:
+    slot_1: 'Tomada 01'
+    slot_2: 'Tomada 02'
+    slot_3: 'Tomada 03'
+    slot_4: 'Tomada 04'
+
+#- platform: tplink
+#  host: 192.168.2.71
+#  mac: '50:C7:BF:05:FB:F3'
+#  name: "Tomada Ar"
+  
+#- platform: broadlink
+#  host: 192.168.2.60
+#  mac: '34:EA:34:F6:40:87'
+#  type: sp3
+#  friendly_name: "Receptor"
+#  icon: mdi:power-socket
+  
+#- platform: broadlink
+#  host: 192.168.2.73
+#  mac: '34:EA:34:B8:1D:F6'
+#  type: sp3
+#  friendly_name: "Sala SL1"
+#  icon: mdi:power-socket
+  
+#- platform: broadlink
+#  host: 192.168.2.74
+#  mac: '34:EA:34:B8:1D:F6'
+#  type: sp3
+#  friendly_name: "TV LG"
+#  icon: mdi:power-socket
+  
+#- platform: broadlink
+#  host: 192.168.2.81
+#  mac: '34:EA:34:9D:30:7D'
+#  type: sp3
+#  friendly_name: "Tomada Ar"
+#  icon: mdi:power-socket
+  
+#- platform: broadlink
+#  host: 192.168.2.61
+##  mac: '34:EA:34:F6:40:64'
+ # type: sp3
+#  friendly_name: "Geladeira"
+#  icon: mdi:power-socket
+  
+- platform: broadlink
+  host: 192.168.2.11
+  mac: '34:EA:34:C9:92:C0'
+  type: mp1
+  friendly_name: 'MP1'
+  slots:
+    slot_1: 'Tomada Televisao'
+    slot_2: 'Tomada Receptor'
+    slot_3: 'Tomada Chromecast'
+    slot_4: 'Tomada Reserva'
+
+- platform: mqtt
+  name: "Geladeira"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "stat/sonoff-geladeira/POWER"
+  command_topic: "cmnd/sonoff-geladeira/power"
+  availability_topic: "tele/sonoff-geladeira/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+- platform: mqtt
+  name: "Chuveiro"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_topic: "stat/sonoff-painel/POWER"
+  command_topic: "cmnd/sonoff-painel/POWER"
+  availability_topic: "tele/sonoff-painel/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  qos: 1
+  retain: true
+  icon: mdi:television-classic

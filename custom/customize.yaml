@@ -1,0 +1,23 @@
+timer.timer:
+  icon: mdi:google
+automation.saindo_de_casa:
+  icon: mdi:home
+automation.chegando_em_casa:
+  friendly_name: Chegando em Casa
+  icon: mdi:home
+automation.tv_on:
+  icon: mdi:television-box
+automation.tv_off:
+  icon: mdi:television-box
+automation.volume_lg_:
+  icon: mdi:volume-plus
+automation.volume_lg__2:
+  icon: mdi:volume-minus
+automation.acende_lampada_quarto_pedro_henrique:
+  icon: mdi:lightbulb
+automation.acende_luz_pedro_henrique:
+  icon: mdi:lightbulb
+automation.apaga_lampada_quarto_pedro_henrique:
+  icon: mdi:lightbulb
+automation.apaga_luz_pedro_henrique:
+  icon: mdi:lightbulb

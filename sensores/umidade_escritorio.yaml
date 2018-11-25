@@ -1,0 +1,8 @@
+- platform: mqtt
+  name: Umidade Escritorio
+  unit_of_measurement: "%"
+  state_topic: "tele/esp-02/SENSOR"
+  value_template: "{{ value_json['DHT11'].Humidity }}"
+  qos: 1
+  payload_available: "online"
+  payload_not_available: "offline"

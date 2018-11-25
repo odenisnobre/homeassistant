@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: Nome Servidor
+  unit_of_measurement: ""
+  state_topic: "casa/sistema/nome"
+  qos: 1
+  payload_available: "online"
+  payload_not_available: "offline"

@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: Modelo CPU
+  unit_of_measurement: ""
+  state_topic: "casa/sistema/modelo"
+  qos: 1
+  payload_available: "online"
+  payload_not_available: "offline"

@@ -1,0 +1,29 @@
+
+- alias: Home Iniciando
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: notify.notifica_mail
+      data:
+        title: 'Home Assistant Iniciado'
+        message: ''
+    - service: notify.notifica_telegram
+      data:
+        message: 'Home Assistant Iniciado'
+    - service: notify.notifica_texto
+      data:
+        message: 'Home Assistant Iniciado'
+           
+- alias: Home Reiniciando
+  trigger:
+    platform: homeassistant
+    event: shutdown
+  action:
+    - service: notify.notifica_mail
+      data:
+        title: 'Home Assistant Reiniciando'
+        message: ''
+    - service: notify.notifica_telegram
+      data:
+        message: 'Home Assistant Reiniciando'

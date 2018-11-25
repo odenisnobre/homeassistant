@@ -1,0 +1,53 @@
+input_boolean.inicia_ciclo:
+  friendly_name: Inicia Ciclo
+  icon: mdi:login  
+
+input_boolean.restart_hass:
+  friendly_name: Reinicia Home Assistant
+  icon: mdi:application
+  
+input_boolean.reinicia_ciclo:
+  friendly_name: Reinicia Ciclo
+  icon: mdi:logout 
+
+input_boolean.input_bool:
+  friendly_name: Liga/Desliga Ventilador
+  icon: mdi:fan  
+  
+input_boolean.vol_mais_lg:
+  icon: mdi:volume-plus
+  friendly_name: Aumenta Volume
+
+input_boolean.vol_menos_lg:
+  icon: mdi:volume-minus  
+  friendly_name: Diminui Volume  
+  
+input_boolean.auto_relogio:
+  friendly_name: 'Hab/Desab Carreg. Relogio'
+  icon: 'mdi:alarm-check'
+  
+input_boolean.roda_script:
+  friendly_name: Roda Scripts
+  icon: mdi:code-braces
+  
+input_boolean.auto_tv:
+  friendly_name: 'Hab/Desab TV'
+  icon: mdi:television
+  
+input_boolean.chrom_auto:
+  friendly_name: Liga Chromecast
+  icon: mdi:google
+  
+input_boolean.recept:
+  friendly_name: Liga Receptor
+  icon: mdi:receipt 
+
+input_boolean.ctrl_ar_con:
+  friendly_name: Controle Geral Ar Condicionado
+  
+input_boolean.ctrl_bypass_ar:
+  friendly_name: By Pass Ar Condicionado
+  
+input_boolean.ctrl_geladeira:
+  friendly_name: Controle Diario Geladeira
+

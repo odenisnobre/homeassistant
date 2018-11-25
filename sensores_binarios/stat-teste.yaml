@@ -1,0 +1,9 @@
+platform: mqtt
+name: "Window Contact Sensor"
+state_topic: "sensor/bateria/valor/check"
+payload_on: "true"
+payload_off: "false"
+payload_available: "online"
+payload_not_available: "offline"
+qos: 1
+

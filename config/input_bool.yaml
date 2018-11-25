@@ -1,0 +1,43 @@
+
+ctrl_ar_con:
+  initial: on
+  name: Controle Ar Condicionado
+  
+ctrl_geladeira:
+  initial: on
+  
+ctrl_loc_casa:
+  initial: on
+  name: Chegando/Saindo Casa
+ 
+ctrl_lado_dir:
+  initial: on
+  name: Controle Lado Direito
+  
+ctrl_lado_esq:
+  initial: on
+  name: Controle Lado Esquerdo
+  
+ctrl_cozinha_ilm:
+  name: Controle Iluminação da Cozinha
+  initial: on
+  
+ctrl_sala_ilm:
+  name: Controle Iluminação da Sala
+  initial: on
+  
+ctrl_corredor_ilm:
+  name: Controle Iluminação do Corredor
+  initial: on
+  
+ctrl_casal_ilm:
+  name: Controle Iluminação do Quarto Casal
+  initial: on  
+  
+ctrl_filho_ilm:
+  name: Controle Iluminação do Quarto Filho
+  initial: on
+  
+ctrl_sacada_ilm:
+  name: Controle Iluminação da Sacada
+  initial: on

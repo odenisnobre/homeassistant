@@ -1,0 +1,513 @@
+                                
+default_view:
+  name: Noobres Home
+  view: true
+  icon: mdi:home
+  entities:
+    - group.grp_geral_01
+    - group.grp_mobile_05
+    - group.grp_sistema_horario
+    - group.grp_tempo_01
+    - group.grp_sistema_rede
+    - group.grp_controle_iluminacao
+    - group.grp_sistema_monitoramento_01
+    - group.grp_sistema_monitoramento_02
+    - group.grp_sistema_monitoramento_03
+#    - camera.google_denis
+#    - camera.google_elida
+
+cozinha:
+  name: Cozinha
+  view: true
+  icon: mdi:kettle
+  entities:
+    - group.grp_cozinha_ilm
+    - group.grp_cozinha_automacoes
+    - group.grp_cozinha_ctrl_geladeira
+    - group.grp_cozinha_dispostivos
+    - switch.geladeira
+
+sala:
+  name: Sala
+  view: true
+  icon: mdi:sofa
+  entities:
+    - group.grp_sala_ilm
+    - group.grp_sala_tomadas
+    - group.grp_sala_tv01
+    - group.grp_sala_temp
+    - group.grp_sala_medicoes
+    - group.grp_sala_automacoes_01
+    - group.grp_sala_automacoes_02
+    - group.grp_sala_automacoes_03
+    - group.grp_sala_dispositivos
+
+sacada:
+  name: Sacada
+  view: true
+  icon: mdi:exit-to-app
+  entities:
+    - group.grp_sacada_ilm
+    - group.grp_sacada_medicoes
+    - group.grp_sacada_temp
+    - group.grp_sacada_automacoes
+    - group.grp_sacada_dispositivos
+
+qto_casal:
+  name: Quarto Casal
+  view: true
+  icon: mdi:hotel
+  entities:
+    - group.grp_qcasal_ilm
+    - group.grp_qcasal_extensao
+    - group.grp_qcasal_ar
+    - group.grp_qcasal_xiaomi
+    - group.grp_qcasal_botoes
+    - group.grp_qcasal_medicoes
+    - group.grp_qcasal_temp
+    - group.grp_qcasal_automacoes_01
+    - group.grp_qcasal_automacoes_02
+    - group.grp_qcasal_automacoes_03
+    - group.grp_qcasal_automacoes_04
+    - group.grp_qcasal_dispositivos
+
+qto_filho:
+  name: Quarto Filho
+  view: true
+  icon: mdi:human-child
+  entities:
+    - group.grp_qfilho_ilm
+    - group.grp_qfilho_temp
+    - group.grp_qfilho_medicoes
+    - group.grp_qfilho_automacoes
+    - group.grp_qfilho_dispositivos
+
+maps:
+  name: Mapas
+  view: true
+  icon: mdi:google-maps
+  entities:
+    - group.grp_geral_03
+    - group.grp_geral_04
+    - group.grp_geral_05
+    - group.grp_geral_12
+
+cams:
+  name: Monitoramento
+  view: true
+  icon: mdi:cctv
+  entities:
+    - camera.onvif_camera
+    - camera.andro
+
+scrip:
+  name: Scripts
+  view: true
+  icon: mdi:script
+  entities:
+    - group.grp_scripts_01
+    - group.grp_scripts_02
+    - group.grp_scripts_03
+    - group.grp_scripts_04
+    - group.grp_scripts_05
+    - group.grp_scripts_06
+
+dev:
+  name: Desenvolvimento
+  view: true
+  icon: mdi:developer-board
+  entities:
+    - group.grp_dev_01
+    - group.grp_dev_02
+    - group.grp_dev_03
+    - group.grp_dev_04
+    - group.grp_dev_05
+    - group.grp_dev_06
+
+system:
+  name: Monitora Sistema
+  view: true
+  icon: mdi:desktop-classic
+  entities:
+    - group.grp_geral_07
+    - group.grp_geral_08
+    - group.grp_geral_09
+    - group.grp_geral_10
+
+grp_geral_01:
+  name: Controles Diversos
+  view: false
+  entities:
+    - input_boolean.ctrl_loc_casa
+    - switch.chuveiro
+
+grp_controle_iluminacao:
+  name: Controle Iluminação
+  view: false
+  entities:
+    - input_boolean.ctrl_cozinha_ilm
+    - input_number.slid_ctl_ilm_cozinha
+    - input_boolean.ctrl_sala_ilm
+    - input_number.slid_ctl_ilm_sala
+    - input_boolean.ctrl_corredor_ilm
+    - input_number.slid_ctl_ilm_corredor
+    - input_boolean.ctrl_casal_ilm
+    - input_number.slid_ctl_ilm_casal
+    - input_boolean.ctrl_filho_ilm
+    - input_number.slid_ctl_ilm_filho
+    - input_boolean.ctrl_sacada_ilm
+    - input_number.slid_ctl_ilm_sacada
+    
+grp_sala_ilm:
+  name: Iluminação Sala
+  view: false
+  entities:
+    - light.iluminacao_da_sala
+    - light.iluminacao_do_corredor
+
+grp_sala_dispositivos:
+  name: Dispositivos Sala
+  view: false
+  entities:
+    - binary_sensor.status_extensao_sala
+    - binary_sensor.status_sonoff_sala
+    - binary_sensor.status_chromecast
+
+grp_sala_tv01:
+  name: Controle TV 01
+  view: false
+  control: hidden
+  entities:
+    - input_number.slid_hora_liga_tv
+    - input_number.slid_minuto_liga_tv
+    - input_number.slid_hora_desliga_tv
+    - input_number.slid_minuto_desliga_tv
+    - sensor.hora_liga_tv
+    - sensor.hora_desliga_tv
+
+grp_sala_medicoes:
+  name: Medições Sala
+  view: false
+  entities:
+    - sensor.temperature_158d00019c9488
+    - sensor.humidity_158d00019c9488
+    - sensor.bateria_nivel_sala
+
+grp_sala_temp:
+  name: Temperatura Sala
+  view: false
+  control: hidden
+  entities:
+    - history_graph.Temperatura_Sala
+
+grp_sala_tomadas:
+  name: Controle Sala TV
+  view: false
+  control: hidden
+  entities:
+    - switch.tomada_receptor
+    - switch.tomada_chromecast
+    - switch.tomada_televisao
+    - switch.tomada_reserva
+
+grp_cozinha_ilm:
+  name: Iluminação Cozinha
+  view: false
+  entities:
+    - light.iluminacao_da_cozinha
+
+grp_cozinha_dispostivos:
+  name: Dispositivos Cozinha
+  view: false
+  entities:
+    - binary_sensor.status_sonoff_cozinha
+
+grp_qcasal_ilm:
+  name: Iluminação Quarto Casal
+  view: false
+  entities:
+    - light.iluminacao_do_quarto_casal
+
+grp_qcasal_ar:
+  name: Ar Condicionado
+  view: false
+  control: hidden
+  entities:
+    - input_boolean.ctrl_ar_con
+    - switch.ar_con_16
+    - switch.ar_controle
+    - switch.ar_cont_doctor
+    - switch.ar_turbo
+    - input_number.slid_lim_inf_ar
+    - input_number.slid_lim_sup_ar
+
+grp_qcasal_extensao:
+  name: Extensao Quarto Casal
+  view: false
+  icon: mdi:dip-switch
+  entities:
+    - switch.tomada_01
+    - switch.tomada_02
+    - switch.tomada_03
+    - switch.tomada_04
+
+grp_qcasal_temp:
+  name: Temperatura Quarto Casal
+  view: false
+  control: hidden
+  entities:
+    - history_graph.Temperatura_Quarto_Casal
+
+grp_qcasal_xiaomi:
+  name: Dados Xiaomi
+  view: false
+  entities:
+    - light.gateway_light_34ce00813667
+    - sensor.illumination_34ce00813667
+    - script.scr_liga_luz_01
+    - input_number.slid_brilho_luz_xiaomi
+
+grp_qcasal_botoes:
+  name: Acionamento Manual
+  view: false
+  entities:
+    - binary_sensor.switch_158d00016d7b12
+    - binary_sensor.switch_158d000200791f
+    - input_boolean.ctrl_lado_dir
+    - input_boolean.ctrl_lado_esq
+
+grp_qcasal_medicoes:
+  name: Medições Quarto Casal
+  view: false
+  entities:
+   - sensor.temperature_158d0001d6f829
+   - sensor.humidity_158d0001d6f829
+   - sensor.pressure_158d0001d6f829
+   - sensor.bateria_nivel_quarto_casal
+
+grp_qcasal_automacoes_02:
+  name: Automações Quarto Casal - 02
+  view: false
+  entities:
+    - automation.gelar_quarto
+    - automation.habilita_doctor
+
+grp_qcasal_dispositivos:
+  name: Dispositivos Quarto Casal
+  view: false
+  entities:
+    - binary_sensor.status_extensao_quarto
+    - binary_sensor.status_rm_quarto
+    - binary_sensor.status_sonoff_quarto_casal
+
+grp_qfilho_ilm:
+  name: Iluminação Quarto Filho
+  view: false
+  entities:
+    - light.iluminacao_do_quarto_filho
+
+grp_qfilho_temp:
+  name: Temperatura Quarto Filho
+  view: false
+  control: hidden
+  entities:
+    - history_graph.Temperatura_Quarto_Filho
+
+grp_qfilho_medicoes:
+  name: Medições Quarto Filho
+  view: false
+  entities:
+    - sensor.temperature_158d0001d82815
+    - sensor.humidity_158d0001d82815
+    - sensor.pressure_158d0001d82815
+    - sensor.bateria_nivel_quarto_filho
+
+grp_qfilho_dispositivos:
+  name: Dispositivos Quarto Filho
+  view: false
+  entities:
+    - binary_sensor.status_sonoff_quarto_filho
+
+grp_sacada_ilm:
+  name: Iluminação Sacada
+  view: false
+  entities:
+    - light.iluminacao_da_sacada
+
+grp_sacada_medicoes:
+  name: Medições Sacada
+  view: false
+  entities:
+    - sensor.temperature_158d0001d82855
+    - sensor.humidity_158d0001d82855
+    - sensor.pressure_158d0001d82855
+    - sensor.bateria_nivel_sacada
+
+grp_sacada_temp:
+  name: Temperatura Sacada
+  view: false
+  control: hidden
+  entities:
+    - history_graph.Temperatura_Sacada
+
+grp_sacada_dispositivos:
+  name: Dispositivos Sacada
+  view: false
+  icon: mdi:television-classic
+  entities:
+    - binary_sensor.status_sonoff_sacada
+
+grp_geral_04:
+  name: Xiaomi Map
+  view: false
+  control: hidden
+  entities:
+    - camera.denisxiaomi
+
+grp_geral_12:
+  name: Asus Map
+  view: false
+  control: hidden
+  entities:
+    - camera.asus
+
+grp_mobile_05:
+  name: Localização Google
+  view: false
+  entities:
+    - device_tracker.google_maps_108233488612250951163
+    - device_tracker.google_maps_113640385496398566348
+  
+grp_sistema_rede:
+  name: Status Rede
+  view: false
+  icon: mdi:access-point-network
+  entities:
+  - sensor.ipv4_address_eth0
+  - binary_sensor.Status_Roteador
+  - sensor.speedtest_download
+  - sensor.speedtest_upload
+  - sensor.speedtest_ping
+
+grp_sistema_monitoramento_01:
+  name: Dados Sistema 01
+  view: false
+  icon: mdi:desktop-classic
+  entities:
+    - sensor.date
+    - sensor.time
+    - sensor.disk_use_
+    - sensor.disk_use_percent_
+    - sensor.memory_free
+    - sensor.memory_use
+    - sensor.processor_use
+    - sensor.cpu_used
+    - sensor.cpu_Temperature
+    - sensor.last_boot
+    - sensor.since_last_boot
+    
+grp_sistema_monitoramento_02:
+  name: Dados Sistema 02
+  view: false
+  icon: mdi:desktop-classic
+  entities:
+    - sensor.nome_servidor
+    - sensor.dias_sistema_online
+    - sensor.tipo_sistema
+    - sensor.plataforma_servidor
+    - sensor.arquitetura_sistema
+    - sensor.versao_sistema
+    - sensor.modelo_cpu
+    
+grp_sistema_monitoramento_03:
+  name: Dados Sistema 03
+  view: false
+  icon: mdi:desktop-classic
+  entities:
+    - sensor.uso_memoria_01_minuto
+    - sensor.uso_memoria_05_minutos
+    - sensor.uso_memoria_15_minutos
+
+grp_sistema_horario:
+  name: Relógio
+  view: false
+  icon: mdi:timetable
+  entities:
+    - sensor.time_date
+
+grp_tempo_01:
+  name: Tempo
+  view: false
+  icon: mdi:weather-cloudy
+  entities:
+  - sensor.yr_temperature
+  - sensor.yweather_temperature
+  - sensor.yr_humidity
+  - sensor.yweather_humidity
+  - sensor.yweather_temperature_min
+  - sensor.yweather_temperature_max
+  - sensor.yweather_condition
+  - sensor.yweather_current
+  - sensor.moon
+  - sun.sun
+  - weather.yweather
+
+grp_scripts_01:
+  name: Ar Condicionado
+  view: false
+  control: hidden
+  entities:
+    - script.scr_gelar
+    - script.scr_ar_con_off
+    - script.scr_ar_con_on
+
+grp_scripts_02:
+  name: Controle TV
+  view: false
+  control: hidden
+  entities:
+    - script.scr_set12
+    - script.scr_set85
+    - script.scr_acordando
+    - script.scr_acordando_notifica
+    - script.scr_set12
+    - script.scr_set85
+    - script.scr_trabalhar
+    - script.scr_vlm_mais
+
+grp_scripts_03:
+  name: Diversos
+  view: false
+  control: hidden
+  entities:
+    - script.scr_envia_temp_rasp
+    - script.scr_liga_luz_01
+    - script.scr_geral_dormir
+    - script.scr_familia_not_home_noite
+    - script.scr_familia_not_home_dia
+
+grp_scripts_04:
+  name: Localização
+  view: false
+  control: hidden
+  entities:
+    - script.scr_atualiza_dispositivos
+    - script.scr_loca_casa
+    - script.scr_loca_casa2
+    - script.scr_loca_not_casa
+    - script.scr_loca_not_casa2
+
+grp_scripts_05:
+  name: Iluminação
+  view: false
+  control: hidden
+  entities:
+    - script.scr_ctrl_ilm_corredor
+    - script.scr_control_sacada
+
+grp_dev_03:
+  name: Scripts Testes
+  view: false
+  entities:
+    - script.scr_geral_fala_tv
+    - switch.camera_fundo_direita

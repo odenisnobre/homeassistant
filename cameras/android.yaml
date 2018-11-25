@@ -1,0 +1,25 @@
+- platform: mjpeg
+  name: andro
+  mjpeg_url: http://192.168.2.104:8080/video
+  
+  
+- platform: ffmpeg
+  input: -rtsp_transport tcp -i rtsp://admin:Josimar10@192.168.1.7:1025/12
+  extra_arguments: -pred 1 -q:v 2
+  name: Cam Frente
+  
+- platform: ffmpeg
+  input: -rtsp_transport tcp -i rtsp://admin:Josimar10@192.168.1.7:1025/11
+  extra_arguments: -pred 1 -q:v 2
+  name: Cam Frente 2
+    
+- platform: ffmpeg
+  input: -rtsp_transport tcp -i rtsp://admin:Josimar10@192.168.1.73:9191/ch0_1.264
+  extra_arguments: -pred 1 -q:v 2
+  name: Cam Area
+  
+
+- platform: ffmpeg
+  input: -rtsp_transport tcp -i rtsp://admin:Josimar10@192.168.1.88:91/ch0_1.264
+  extra_arguments: -pred 1 -q:v 2
+  name: Cam Lateral  
